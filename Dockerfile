@@ -20,4 +20,4 @@ COPY ./config/default /etc/nginx/sites-available/default
 
 #CMD ["/usr/bin/supervisord"] 
 
-ENTRYPOINT ["/bin/sh –c"] CMD ['systemctl','start','nginx'] CMD ['systemctl','start','php8.1-fpm'] CMD ['systemctl','status','php8.1-fpm']
+ENTRYPOINT ["systemctl"] CMD ['start','nginx'] CMD ['start','php8.1-fpm'] CMD ['status','php8.1-fpm']
